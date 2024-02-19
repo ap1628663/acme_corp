@@ -38,7 +38,7 @@ minikube addons enable ingress
 
 also
 
-You can deploy Prometheus and Grafana using Helm charts. 
+We can deploy Prometheus and Grafana using Helm charts. 
 Step 1:Install and initialized Helm.
 Step 2: helm install prometheus stable/prometheus-operator --namespace monitoring
 Step 3: helm install grafana stable/grafana --namespace monitoring
