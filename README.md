@@ -62,12 +62,12 @@ Step 3: helm install grafana stable/grafana --namespace monitoring
 
 10. Describe any logging infrastructure to implement centralized logging.
 - I'm choosing GCP infra
-Step1: Enable Cloud Logging
-Step2: Set Up Kubernetes Cluster
-Step3: Install Fluentd Sidecar
-Step4: Configure Fluentd to Collect Logs
-Step5: Deploy Fluentd ConfigMap and Daemonset
-Step6: Set Up Log Monitoring and Alerting
+ Step1: Enable Cloud Logging
+ Step2: Set Up Kubernetes Cluster
+ Step3: Install Fluentd Sidecar
+ Step4: Configure Fluentd to Collect Logs
+ Step5: Deploy Fluentd ConfigMap and Daemonset
+ Step6: Set Up Log Monitoring and Alerting
 
 11. We want to give ‘kubectl’ access to developers but only read access to the cluster, how will you configure it?
 - Create a role with read-only permissions and RoleBinding bind it to the developers group.
