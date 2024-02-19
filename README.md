@@ -49,11 +49,12 @@ Step 3: helm install grafana stable/grafana --namespace monitoring
 8. Let’s say the cluster has two nodes, one of which has a GPU, and we want the sample app to be deployed only on the node with the GPU, how can you ensure deployment runs app on that node exclusively? 
 - We can use Kubernetes node selectors and affinity/anti-affinity rules.
 
-*Node Selector: We can assign labels to nodes to identify which node has a GPU. For instance, label the node with GPU as gpu=true and the other node as gpu=false.
+ *Node Selector: We can assign labels to nodes to identify which node has a GPU. For instance, label the node with GPU as gpu=true and the other node as gpu=false.
 
-*Pod Definition: In pod manifest, wecan specify a node selector to indicate that the pod should run only on nodes with the GPU. 
+ *Pod Definition: In pod manifest, wecan specify a node selector to indicate that the pod should run only on nodes with the GPU. 
 
-*Affinity/Anti-affinity: We can use affinity/anti-affinity rules to specify that the pod should be scheduled on a node with a GPU. We can use node affinity to ensure that the pod is scheduled onto a node with the specified label.
+ *Affinity/Anti-affinity: We can use affinity/anti-affinity rules to specify that the pod should be scheduled on a node with a GPU. We can use node affinity to ensure that the pod is scheduled onto a node 
+ with the specified label.
 
 9. Whenever we deploy container into the cluster it is pulled from DockerHub but what change will have to be made if we need to pull container from alternative source, say Azure Repos?
 - If we need to pull containers from remote source instead of DockerHub, we need to modify the container image references in deployment manifest.
@@ -82,7 +83,7 @@ Step6: Set Up Log Monitoring and Alerting
 High Availability for Kubernetes:
 - ReplicaSet
 - Horizontal Pod Autoscaler (HPA)
--Pod Disruption Budget (PDB)
--Node and Pod Affinity/Anti-Affinity  
--Fault Tolerance and Self-healing - Health Checks, Pod Lifecycle Management, Node Replacement.
--Stateful Workloads
+- Pod Disruption Budget (PDB)
+- Node and Pod Affinity/Anti-Affinity  
+- Fault Tolerance and Self-healing - Health Checks, Pod Lifecycle Management, Node Replacement.
+- Stateful Workloads
