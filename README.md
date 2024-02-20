@@ -23,12 +23,12 @@ Step 2: Update the repository
 helm repo update
 
 Step 3: Install nginx Ingress Controller
-helm install nginx-ingress ingress-nginx/ingress-nginx
+"helm install nginx-ingress ingress-nginx/ingress-nginx"
 
 also
 
 Install nginx Ingress Controller for minukube
-minikube addons enable ingress
+"minikube addons enable ingress"
 
 5. Provide YAML file to create new namespace in Kubernetes cluster called “monitoring”.
 - namespace.yaml
